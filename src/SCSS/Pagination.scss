@@ -1,0 +1,49 @@
+.pagination {
+    position: relative;
+    width: 100%;
+    padding-bottom: 2%;
+}
+
+.previous {
+    position: absolute;
+    top: 0.5%;
+    left: 3%;
+    color: #3F3F3F;
+    line-height: 28px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.numbers {
+    position: absolute;
+    top: 0.5%;
+    left: 48%;
+    line-height: 23px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #3F3F3F;
+    width: 100px
+}
+
+.next {
+    position: absolute;
+    top: 0.5%;
+    right: 5%;
+    line-height: 28px;
+    font-size: 18px;
+    color: #3F3F3F;
+    cursor: pointer;
+    display: flex;
+}
+
+.one {
+    background-color: #FFFFFF;
+    border: 1px solid #3F3F3F;
+    border-radius: 3px;
+    padding: 8%;
+}
+
+.arrow {
+    font-size: 30px;
+    margin-left: 11%;
+}

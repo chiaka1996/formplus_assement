@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from "react";
+import Navigation from "./Components/Navigation";
+import Templates from "./Components/Templates";
+import Pagination from "./Components/Pagination";
+import axios from "axios";
+import {useDispatch,useSelector} from 'react-redux';
+import {addTemplate,filteredTemplate,filteredTemplate2,filteredByCategory} from './Redux/Actions';
+import './SCSS/App.scss';
+
 
 function App() {
+
+  const dispatch = useDispatch();
+
+  //get templates fro the Api
+  const sendGetRequest = async () => {
+    try{
+      const response = await axios.get('https://front-end-task-dot-fpls-dev.uc.r.appspot.com/api/v1/public/task_templates');
+      const {data} = response;
+      console.log(data);
+      dispatch(addTemplate(data));
+      dispatch(filteredTemplate(data))
+      dispatch(filteredTemplate2(data))
+      dispatch(filteredByCategory(data))
+    }
+    catch (error){
+      throw error 
+    }
+  }
+
+  useEffect(() => {
+    sendGetRequest();
+  },[])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+       <Templates />
+      <Pagination />
     </div>
   );
 }
