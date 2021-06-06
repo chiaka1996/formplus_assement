@@ -61,9 +61,6 @@ const Navigation = () => {
                 <input type="text" placeholder="search template" value={searchText} onChange={(e) => searchInput(e)}/>
                 </div>
 
-                {/* <div className="flex"></div> */}
-
-                {/* mobile sort div*/}
                 <div className="sortDiv">
                 <div className="sortBy">sort by:</div>
 
@@ -95,38 +92,7 @@ const Navigation = () => {
                        <option value="descending">descending</option>
                    </select>
                </div>
-               </div>
-
-               {/* <div className="sortBy">sort by:</div>
-
-               <div className="category">
-                   <div>Category</div>
-                   <select onChange={(e)=>changeCategoryValue(e)} value={category}>
-                     <option value="All">All</option>
-                     <option value="E-commerce">E-commerce</option>
-                     <option value="Health">Health</option>
-                     <option value="Education">Education</option>
-
-                   </select>
-               </div>
-
-               <div className="order">
-                   <div>Order</div>
-                   <select onChange={(e) => changeOrderValue(e)} value={order}>
-                       <option value="Default">Default</option>
-                       <option value="ascending">ascending</option>
-                       <option value="descending">descending</option>
-                   </select>
-               </div>
-
-               <div className="date">
-                   <div>Date</div>
-                   <select onChange={(e) => changeDateValue(e)} value={date}>
-                       <option value="Default">Default</option>
-                       <option value="ascending">ascending</option>
-                       <option value="descending">descending</option>
-                   </select>
-               </div> */}
+               </div>            
             </form>
         </div>
     )

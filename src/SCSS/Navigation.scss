@@ -97,8 +97,20 @@ $topMobile: -14%;
     }
 }
 
+@media only screen and (min-width: 760px) and (max-width: 1000px){
+    .date {
+        margin-top: 0;
+    }
+
+    .sortBy {
+        margin-right: 0;
+        padding-top: 1.9%;
+    }
+
+}
+
 //web design
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1001px) {
 .navContainer{
     padding-top: 1%;
     width: 100%;
@@ -178,7 +190,6 @@ $topMobile: -14%;
 .date {
     position: relative;
     width: 100px;
-    // margin-right: 0.5%;
     padding-top: 1.5%;
     margin-top: 0;
 
