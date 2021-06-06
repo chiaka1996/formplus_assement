@@ -1,12 +1,12 @@
 import React from 'react';
 import {useSelector } from 'react-redux';
 import '../SCSS/Templates.scss';
-
+ 
 const Records = () => {
     const currentTemplates = useSelector(state => state.SinglePageTemp);
     const category = useSelector(state=>state.Category);
-    console.log(currentTemplates);
-    // const template = useSelector(state => state.singlePageTemplate);
+    const templatesFound = useSelector(state => state.FilteredTemplates);
+
     return (
         <div className="templates">
   
@@ -16,7 +16,7 @@ const Records = () => {
 
             <div className="templateHeader">
             <span className="templateName">{category} Template</span>
-            <span className="totalTemplateFound">{currentTemplates.length} Templates found</span>
+            <span className="totalTemplateFound">{templatesFound.length} Templates found</span>
             </div>
 
             <div className="templateFlex">

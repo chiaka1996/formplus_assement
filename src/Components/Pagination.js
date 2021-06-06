@@ -4,7 +4,7 @@ import {useSelector, useDispatch } from 'react-redux';
 import {templatePerPage } from '../Redux/Actions';
 
 
-const Pagination = () => {
+const Pagination = () => { 
     const dispatch = useDispatch();
     const allTemplates = useSelector(state => state.AddTemplates);
     const filteredTemplates = useSelector(state => state.FilteredTemplates);

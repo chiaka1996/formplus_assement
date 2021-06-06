@@ -1,46 +1,54 @@
+$top: 15%;
+$topMobile: -14%;
+//mobile design
 .navContainer{
-    padding-top: 1%;
+    padding-top: 0;
     width: 100%;
     font-family: 'Varela Round', sans-serif;
 }
 
-.flex {
-    flex: 1;
-}
-
 .navigationForm {
-    display: flex;
-    flex-direction: row;
+    // display: flex;
+    // flex-direction: column;
     width: 100%;
 }
+
 .searchInputDiv {
-    width: 180px;
-    margin: 1% 0 0 0;
+    margin: 0 2.3% 0 0;
 
     input{
-        padding: 1.9%;
-    }
+        padding: 2%;
+        width: 100%;
+    }  
+}
 
+.sortDiv{
+    display: flex;
+    flex-direction: row;
+    margin: 4% 2% 0 0;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .sortBy {
     margin-right: 1%;
     position: relative;
-    padding-top: 1.9%;
+    padding-top: 3.9%;
     font-size: 13px;
 }
 
 .category {
     position: relative;
     width: 100px;
-    margin-right: 1.5%;
+    margin-right: 4.5%;
     padding-top: 1.5%;
 
     div{
         position: absolute;
-        top: 30%;
+        top: $topMobile;
         left: 10%;
-        line-height: 1.5;
+        line-height: 1.3;
         font-size: 11px;
         background-color: white;
     }
@@ -58,9 +66,9 @@
 
     div{
         position: absolute;
-        top: 30%;
+        top: $topMobile;
         left: 10%;
-        line-height: 1.5;
+        line-height: 1.3;
         font-size: 11px;
         background-color: white;
     }
@@ -74,12 +82,13 @@
     width: 100px;
     // margin-right: 0.5%;
     padding-top: 1.5%;
+    margin-top: 2.3%;
 
     div{
         position: absolute;
-        top: 30%;
+        top: $topMobile;
         left: 10%;
-        line-height: 1.5;
+        line-height: 1.3;
         font-size: 11px;
         background-color: white;
     }
@@ -87,4 +96,103 @@
         padding: 4%;
     }
 }
+
+//web design
+@media only screen and (min-width: 769px) {
+.navContainer{
+    padding-top: 1%;
+    width: 100%;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.navigationForm {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.searchInputDiv {
+    margin: 1% 0 0 0;
+
+    input{
+        padding: 2%;
+        width: 280px;
+    }
+
+}
+
+.sortDiv{
+    display: flex;
+    flex-direction: row;
+    margin: 0% 0 0 4%;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.sortBy {
+    margin-right: 1%;
+    position: relative;
+    padding-top: 1.9%;
+    font-size: 13px;
+}
+
+.category {
+    position: relative;
+    width: 100px;
+    margin-right: 3%;
+    padding-top: 1.5%;
+
+    div{
+        position: absolute;
+        top: $top;
+        left: 10%;
+        line-height: 1.3;
+        font-size: 11px;
+        background-color: white;
+    }
+
+    select {
+        padding: 4%;
+    }
+}
+
+.order {
+    position: relative;
+    width: 100px;
+    margin-right: 3%;
+    padding-top: 1.5%;
+
+    div{
+        position: absolute;
+        top: $top;
+        left: 10%;
+        line-height: 1.3;
+        font-size: 11px;
+        background-color: white;
+    }
+    select {
+        padding: 4%;
+    }
+}
+
+.date {
+    position: relative;
+    width: 100px;
+    // margin-right: 0.5%;
+    padding-top: 1.5%;
+    margin-top: 0;
+
+    div{
+        position: absolute;
+        top: $top;
+        left: 10%;
+        line-height: 1.3;
+        font-size: 11px;
+        background-color: white;
+    }
+    select {
+        padding: 4%;
+    }
+}
+  }
 

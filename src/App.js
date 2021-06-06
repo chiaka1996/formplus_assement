@@ -23,7 +23,7 @@ function App() {
       dispatch(filteredByCategory(data))
     }
     catch (error){
-      throw error 
+      throw error
     }
   }
 
