@@ -64,7 +64,7 @@ const Navigation = () => {
         <div className="navContainer">
             <form className="navigationForm">
                 <div className="searchInputDiv">
-                <input type="text" placeholder="search template" value={searchText} onChange={(e) => searchInput(e)} value={searchText}/>
+                <input type="text" placeholder="search template" value={searchText} onChange={(e) => searchInput(e)}/>
                 </div>
 
                 <div className="flex"></div>

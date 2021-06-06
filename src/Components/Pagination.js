@@ -29,6 +29,7 @@ const Pagination = () => {
 
     useEffect(() => {
         dispatch(templatePerPage (currentPost));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       },[currentPage, allTemplates,filteredTemplates])
     
     return (
